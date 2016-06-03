@@ -2,8 +2,8 @@
 
 server_root=`pwd`
 
-if test -e ${server_root}/conf/env ; then
-    source ${server_root}/conf/env
+if test -e ${server_root}/env ; then
+    source ${server_root}/env
 fi
 
 #
