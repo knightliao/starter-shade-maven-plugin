@@ -66,7 +66,6 @@ public class TarFileUtils {
             throws IOException {
 
         File f = new File(path);
-        System.out.println(f.exists());
         String entryName = base + f.getName();
         TarArchiveEntry tarEntry = new TarArchiveEntry(f, entryName);
         tOut.putArchiveEntry(tarEntry);
@@ -82,7 +81,7 @@ public class TarFileUtils {
             File[] children = f.listFiles();
             if (children != null) {
                 for (File child : children) {
-                    System.out.println(child.getName());
+                    System.out.println("add " + child.getName());
                     addFileToTarGz(tOut, child.getAbsolutePath(), entryName + "/");
                 }
             }

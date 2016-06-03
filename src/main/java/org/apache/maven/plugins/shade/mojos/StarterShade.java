@@ -1,6 +1,7 @@
 package org.apache.maven.plugins.shade.mojos;
 
 import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -22,6 +23,7 @@ import org.apache.maven.plugins.shade.mojo.ShadeMojo;
 import org.apache.maven.project.MavenProject;
 
 import com.knightliao.plugin.starter.shade.utils.MavenFileUtils;
+import com.knightliao.plugin.starter.shade.utils.TarFileUtils;
 
 /**
  *
@@ -134,6 +136,18 @@ public class StarterShade extends BaseStarterMojo {
 
         } catch (Exception e) {
             getLog().warn(e.toString(), e);
+        }
+
+        //
+        // make a tar.gz
+        //
+        getLog().info(String.format("make %s", folderName + ".tar.gz"));
+        String dir = mavenProject.getBuild().getDirectory();
+        try {
+            TarFileUtils
+                    .createDirTarGz(dir + File.separator + folderName, dir + File.separator + folderName + ".tar.gz");
+        } catch (IOException e) {
+            getLog().info(e.toString());
         }
 
     }
