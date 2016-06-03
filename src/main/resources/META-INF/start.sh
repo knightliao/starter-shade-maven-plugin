@@ -22,5 +22,5 @@ fi
 #export JAVA_OPTS="$JAVA_OPTS -XX:+UseParallelGC -XX:+UseParallelOldGC -XX:ParallelGCThreads=2"
 #export JAVA_OPTS="$JAVA_OPTS -XX:+PrintGCDetails -XX:+PrintGCTimeStamps"
 
-echo "nohup java $JAVA_OPTS -jar lib/${CUR_BUNDLE_NAME}  >> log_`date +%s`.log 2>&1 &"
-nohup java $JAVA_OPTS -jar lib/${CUR_BUNDLE_NAME} >> log_`date +%s`.log 2>&1 &
+echo "nohup java $JAVA_OPTS -jar ${CUR_BUNDLE_NAME}  >> log_`date +%s`.log 2>&1 &"
+nohup java $JAVA_OPTS -jar ${CUR_BUNDLE_NAME} >> log_`date +%s`.log 2>&1 &
