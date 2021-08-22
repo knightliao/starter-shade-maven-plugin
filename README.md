@@ -29,7 +29,7 @@ https://github.com/knightliao/starter-shade-demo
             <plugin>
                 <groupId>com.github.knightliao.plugin</groupId>
                 <artifactId>starter-shade-maven-plugin</artifactId>
-                <version>1.0.0</version>
+                <version>1.0.1</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
