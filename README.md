@@ -12,7 +12,7 @@ shade maven plugin for java projects / Java项目的打包插件
 
 ## demo
 
-https://github.com/knightliao/starter-shade-maven-plugin/demos/starter-shade-demo
+demos/starter-shade-demo
 
 ## 使用方式
 
